@@ -22,6 +22,13 @@ export const useTransactionsStore = defineStore("transactions", {
         0,
       );
     },
+    /** Calculate total expense */
+    expenses(state) {
+      return state.transactions.reduce(
+        (total, transaction) => (transaction.amount < 0 ? total + transaction.amount : total),
+        0,
+      );
+    },
   },
   actions: {},
 });
