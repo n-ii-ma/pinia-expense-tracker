@@ -30,5 +30,10 @@ export const useTransactionsStore = defineStore("transactions", {
       );
     },
   },
-  actions: {},
+  actions: {
+    /** Add new transaction */
+    addTransaction(transaction: Transaction) {
+      this.transactions.push(transaction);
+    },
+  },
 });
