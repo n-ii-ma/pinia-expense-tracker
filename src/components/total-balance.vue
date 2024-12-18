@@ -7,7 +7,7 @@ const store = useTransactionsStore();
 
 <template>
   <section>
-    <h4 class="font-semibold text-lg">YOUR BALANCE</h4>
+    <h4 class="font-semibold text-lg">Total Balance</h4>
     <h1 class="font-bold tracking-wider text-xl">
       {{ store.balanceSign }}${{ Math.abs(store.totalBalance).toFixed(2) }}
     </h1>
