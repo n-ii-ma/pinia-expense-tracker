@@ -7,6 +7,11 @@ export const useTransactionsStore = defineStore("transactions", {
     // List of transactions
     transactions: [] as Transaction[],
   }),
-  getters: {},
+  getters: {
+    /** Calculate total balance */
+    totalBalance(state) {
+      return state.transactions.reduce((total, transaction) => total + transaction.amount, 0);
+    },
+  },
   actions: {},
 });
