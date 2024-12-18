@@ -38,7 +38,7 @@ const handleSubmit = () => {
       <input
         v-model.trim="formState.title"
         type="text"
-        class="w-full rounded-md border border-gray-300 outline-none p-2"
+        class="w-full rounded-md border border-gray-300 outline-none p-2 shadow-md"
         placeholder="Enter Title..."
         required
       />
@@ -47,7 +47,7 @@ const handleSubmit = () => {
           v-model="formState.amount"
           type="number"
           inputmode="decimal"
-          class="w-full rounded-md border border-gray-300 outline-none p-2"
+          class="w-full rounded-md border border-gray-300 outline-none p-2 shadow-md"
           step="0.01"
           placeholder="Enter amount..."
           required
