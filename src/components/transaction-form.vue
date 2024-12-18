@@ -18,11 +18,11 @@
           placeholder="Enter amount..."
           required
         />
-        <span class="text-xs text-gray-700">(Negative - Expense / Positive - Income)</span>
+        <span class="px-1 text-xs text-gray-700">(Negative: Expense / Positive: Income)</span>
       </div>
       <button
         type="submit"
-        class="w-full p-2 text-white bg-purple-500 rounded-md hover:bg-purple-600 shadow-md"
+        class="w-full p-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 shadow-md"
       >
         Add
       </button>
