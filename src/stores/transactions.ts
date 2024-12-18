@@ -35,5 +35,13 @@ export const useTransactionsStore = defineStore("transactions", {
     addTransaction(transaction: Transaction) {
       this.transactions.push(transaction);
     },
+    /** Delete transaction by id */
+    deleteTransaction(id: string) {
+      const index = this.transactions.findIndex((transaction) => transaction.id === id);
+
+      if (index !== -1) {
+        this.transactions.splice(index, 1);
+      }
+    },
   },
 });
