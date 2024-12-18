@@ -14,7 +14,7 @@ const store = useTransactionsStore();
 
 <template>
   <li
-    :class="`bg-white shadow-md flex justify-between relative p-2 my-2 rounded-md border-r-4 ${transaction.amount > 0 ? 'border-green-500' : 'border-red-500'}`"
+    :class="`bg-white shadow-md flex justify-between p-2 rounded-md border-r-4 ${transaction.amount > 0 ? 'border-green-500' : 'border-red-500'}`"
   >
     <div class="flex items-center gap-2">
       <button
