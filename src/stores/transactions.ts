@@ -16,6 +16,12 @@ export const useTransactionsStore = defineStore("transactions", {
       return this.totalBalance < 0 ? "-" : "";
     },
     /** Calculate total income */
+    income(state) {
+      return state.transactions.reduce(
+        (total, transaction) => (transaction.amount > 0 ? total + transaction.amount : total),
+        0,
+      );
+    },
   },
   actions: {},
 });
