@@ -46,6 +46,7 @@ const handleSubmit = () => {
         <input
           v-model="formState.amount"
           type="number"
+          inputmode="decimal"
           class="w-full rounded-md border border-gray-300 outline-none p-2"
           step="0.01"
           placeholder="Enter amount..."
