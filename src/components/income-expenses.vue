@@ -6,7 +6,7 @@ const store = useTransactionsStore();
 </script>
 
 <template>
-  <div class="flex justify-between shadow-md bg-white rounded-md p-5 my-5">
+  <section class="flex justify-between shadow-md bg-white rounded-md p-5 my-5">
     <div class="flex-1 border-r border-gray-200 text-center">
       <h4 class="font-semibold">INCOME</h4>
       <p class="my-1 tracking-wider text-xl text-green-600 font-medium">
@@ -19,5 +19,5 @@ const store = useTransactionsStore();
         ${{ Math.abs(store.expenses).toFixed(2) }}
       </p>
     </div>
-  </div>
+  </section>
 </template>

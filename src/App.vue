@@ -7,7 +7,7 @@ import TransactionForm from "./components/transaction-form.vue";
 
 <template>
   <h2 class="text-2xl font-semibold mb-4">Expense Tracker</h2>
-  <main class="w-[300px]">
+  <main class="w-[300px] space-y-6">
     <TotalBalance />
     <IncomeExpenses />
     <TransactionList />

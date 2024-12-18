@@ -8,13 +8,15 @@ const store = useTransactionsStore();
 </script>
 
 <template>
-  <h3 class="border-b border-gray-200 pb-2 mt-5 mb-2 font-semibold">History</h3>
-  <p class="text-gray-700" v-if="!store.transactions.length">No Transaction to Show</p>
-  <ul v-else>
-    <TransactionItem
-      v-for="transaction in store.transactions"
-      :key="transaction.id"
-      :transaction="transaction"
-    />
-  </ul>
+  <section>
+    <h3 class="border-b border-gray-200 pb-2 mb-2 font-semibold">History</h3>
+    <p class="text-gray-700" v-if="!store.transactions.length">No Transaction to Show</p>
+    <ul v-else>
+      <TransactionItem
+        v-for="transaction in store.transactions"
+        :key="transaction.id"
+        :transaction="transaction"
+      />
+    </ul>
+  </section>
 </template>
