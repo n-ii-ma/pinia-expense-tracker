@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import TotalBalance from "./components/total-balance.vue";
-import IncomeExpenses from "./components/income-expenses.vue";
-import TransactionList from "./components/transaction-list.vue";
-import TransactionForm from "./components/transaction-form.vue";
+import TotalBalance from "@/components/total-balance.vue";
+import IncomeExpenses from "@/components/income-expenses.vue";
+import TransactionList from "@/components/transaction-list.vue";
+import TransactionForm from "@/components/transaction-form.vue";
 </script>
 
 <template>
