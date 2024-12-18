@@ -1,12 +1,26 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useTransactionsStore } from "@/stores/transactions";
+
+import type { Transaction } from "@/stores/types";
+
+// Props
+defineProps<{
+  transaction: Transaction;
+}>();
+
+// Transactions store
+const store = useTransactionsStore();
+</script>
 
 <template>
-  <!-- minus or plus -->
   <li
-    class="bg-white shadow-md flex justify-between relative p-2 my-2 rounded-md border-r-4 border-green-500"
+    :class="`bg-white shadow-md flex justify-between relative p-2 my-2 rounded-md border-r-4 ${transaction.amount > 0 ? 'border-green-500' : 'border-red-500'}`"
   >
     <div class="flex items-center gap-2">
-      <button class="text-red-500 hover:text-red-600">
+      <button
+        @click="store.deleteTransaction(transaction.id)"
+        class="text-red-500 hover:text-red-600"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -20,8 +34,12 @@
           />
         </svg>
       </button>
-      <h4 class="font-semibold">Shopping</h4>
+      <h4 class="font-semibold">{{ transaction.title }}</h4>
     </div>
-    <h4 class="font-semibold">$500</h4>
+    <h4 class="font-semibold">
+      <span v-if="transaction.amount > 0">+</span><span v-else>-</span>${{
+        Math.abs(transaction.amount).toFixed(2)
+      }}
+    </h4>
   </li>
 </template>
